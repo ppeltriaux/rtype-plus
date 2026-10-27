@@ -1,4 +1,5 @@
 # the patcher's output and ROM sets: never commit them
+rtype-plus/
 rtype-extended/
 *.zip
 *.7z

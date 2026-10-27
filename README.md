@@ -1,7 +1,7 @@
-# R-Type Extended 2026-10-20 (7d13fb5)
+# R-Type Plus 2026-10-28 (04294d3)
 
 A patch for the 1987 arcade R-Type (Irem, M72 board) that adds four things the original never
-had, on the original board's own program:
+had, on the original board's own program (and a PLUS, in the logo's own colours, under the title):
 
 - **Two players at once.** A 2P start begins co-op; either player can join a game later with a coin
   and their start button. Player 2 flies a crimson R-9 with a Force of its own, the beam gauge splits
@@ -52,14 +52,14 @@ are wrong: they are changed, that is expected.
 ## How to use it
 
 ```
-python3 rtype_extended.py path/to/rtype.zip
+python3 rtype_plus.py path/to/rtype.zip
 ```
 
-(on Windows: `py rtype_extended.py path\to\rtype.zip`). It writes `rtype-extended/rtype.zip`; your files are
+(on Windows: `py rtype_plus.py path\to\rtype.zip`). It writes `rtype-plus/rtype.zip`; your files are
 only read. Put that zip where MAME looks for ROMs in place of the original (keep the original
 elsewhere) and run `rtype`.
 
-With `--set rtypeu` it writes `rtype-extended/rtypeu.zip` instead: the same game as MAME's
+With `--set rtypeu` it writes `rtype-plus/rtypeu.zip` instead: the same game as MAME's
 R-Type (US) clone, which sits beside an untouched `rtype.zip` (front-ends list it as
 "R-Type (US)"). `-o FOLDER` picks the output folder. Every file written is checked against the
 SHA1 it must have, so a wrong or damaged input stops with the files it could not find.
@@ -68,15 +68,16 @@ Tested with MAME 0.289 and MAME 0.258.
 
 ## What is in the patch
 
-None of the original game. The program gets 7510 bytes of the hack's own (its code and data in
+None of the original game. The program gets 7830 bytes of the hack's own (its code and data in
 the program's free space, the jumps where it hooks in and the small stubs they lead to, and the
 boot test's checksum word). Any 3 bytes or more in a row that your program already has anywhere,
-3232 bytes in all (the instructions each hook moves aside into its stub, and short sequences the
+3388 bytes in all (the instructions each hook moves aside into its stub, and short sequences the
 new code happens to share with the original), are copied from your own program at patch time, so
 the patch holds no 3 bytes in a row of the original's. The new graphics (player 2's crimson HUD
 glyphs, its mirrored beam gauge, the Armour cells, the timer's colon, the 1P / 2P tags) and player
 2's two palettes are made from your own ROMs by the script's code, as recoloured or rearranged
-copies of the game's. Every file written is checked against the SHA1 it must have.
+copies of the game's; the title's PLUS is drawn by the script's code too (its own art, in the
+pens of the logo's palette). Every file written is checked against the SHA1 it must have.
 
 ## Legal
 
