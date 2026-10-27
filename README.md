@@ -1,4 +1,4 @@
-# R-Type Plus 2026-10-28 (04294d3)
+# R-Type Plus 2026-10-28 (bfe81f7)
 
 A patch for the 1987 arcade R-Type (Irem, M72 board) that adds four things the original never
 had, on the original board's own program (and a PLUS, in the logo's own colours, under the title):
@@ -93,4 +93,4 @@ object to this patch, write to dev@rtypeneo.com and it will be taken down.
 ## Contact
 
 dev@rtypeneo.com, or an issue on this repository. More about how the patch was made, with videos
-and screenshots: https://rtypeneo.com/arcade.html
+and screenshots: https://rtypeplus.com/
