@@ -1,4 +1,4 @@
-# R-Type Plus 2026-10-28 (bfe81f7)
+# R-Type Plus 2026-10-28 (d357ca5)
 
 A patch for the 1987 arcade R-Type (Irem, M72 board) that adds four things the original never
 had, on the original board's own program (and a PLUS, in the logo's own colours, under the title):
@@ -7,8 +7,9 @@ had, on the original board's own program (and a PLUS, in the logo's own colours,
   and their start button. Player 2 flies a crimson R-9 with a Force of its own, the beam gauge splits
   while both play, and a lost ship flies in again where the game is while the partner plays.
 - **A stage select.** On the start screen, left and right pick the stage (`STAGE n` on the credit line).
-- **Armour.** Up and down on the start screen pick CLASSIC, ARMOUR or BOSS RUSH. In Armour a hit
-  with ships to spare costs a ship and a laser level, and the game goes on where it is.
+- **Armour.** Up and down on the start screen pick CLASSIC, ARMOUR or BOSS RUSH. In Armour an enemy's
+  hit with ships to spare costs a ship and a laser level, and the game goes on where it is (a wall
+  still destroys the ship).
 - **Boss Rush.** The seven bosses back to back (stage 3's, the whole battleship, is left out), every
   ship fully armed (the Force, the blue laser, two bits, missiles, a speed-up), against a run timer,
   with a ranking table of its own (kept until power-off, like the game's).
@@ -68,10 +69,10 @@ Tested with MAME 0.289 and MAME 0.258.
 
 ## What is in the patch
 
-None of the original game. The program gets 7830 bytes of the hack's own (its code and data in
+None of the original game. The program gets 7836 bytes of the hack's own (its code and data in
 the program's free space, the jumps where it hooks in and the small stubs they lead to, and the
 boot test's checksum word). Any 3 bytes or more in a row that your program already has anywhere,
-3388 bytes in all (the instructions each hook moves aside into its stub, and short sequences the
+3420 bytes in all (the instructions each hook moves aside into its stub, and short sequences the
 new code happens to share with the original), are copied from your own program at patch time, so
 the patch holds no 3 bytes in a row of the original's. The new graphics (player 2's crimson HUD
 glyphs, its mirrored beam gauge, the Armour cells, the timer's colon, the 1P / 2P tags) and player
