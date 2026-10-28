@@ -1,4 +1,4 @@
-# R-Type Plus 2026-10-28 (d357ca5)
+# R-Type Plus 2026-10-28 (715ae77)
 
 A patch for the 1987 arcade R-Type (Irem, M72 board) that adds four things the original never
 had, on the original board's own program (and a PLUS, in the logo's own colours, under the title):
@@ -69,10 +69,10 @@ Tested with MAME 0.289 and MAME 0.258.
 
 ## What is in the patch
 
-None of the original game. The program gets 7836 bytes of the hack's own (its code and data in
+None of the original game. The program gets 9631 bytes of the hack's own (its code and data in
 the program's free space, the jumps where it hooks in and the small stubs they lead to, and the
 boot test's checksum word). Any 3 bytes or more in a row that your program already has anywhere,
-3420 bytes in all (the instructions each hook moves aside into its stub, and short sequences the
+8854 bytes in all (the instructions each hook moves aside into its stub, and short sequences the
 new code happens to share with the original), are copied from your own program at patch time, so
 the patch holds no 3 bytes in a row of the original's. The new graphics (player 2's crimson HUD
 glyphs, its mirrored beam gauge, the Armour cells, the timer's colon, the 1P / 2P tags) and player
