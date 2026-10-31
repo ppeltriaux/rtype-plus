@@ -1,4 +1,4 @@
-# R-Type Plus 2026-10-28 (715ae77)
+# R-Type Plus 1.0 (e71b5a7)
 
 A patch for the 1987 arcade R-Type (Irem, M72 board) that adds four things the original never
 had, on the original board's own program (and a PLUS, in the logo's own colours, under the title):
@@ -88,8 +88,9 @@ named here only to say which game the patch is for. The patch is not the game an
 without it: it holds none of the game's program, graphics or sound (see above), and you need your
 own lawfully obtained copy of the original ROMs. None are included here, none are linked to, and
 none are sent on request: please do not ask. The patcher and the patch's own code are under the
-MIT licence (LICENSE), which grants nothing for Irem's work. If you hold rights in R-Type and
-object to this patch, write to dev@rtypeneo.com and it will be taken down.
+MIT licence (LICENSE), which covers only the files here and grants nothing for Irem's work. If you
+hold rights in R-Type and object to this patch, write to dev@rtypeneo.com and it will be taken
+down.
 
 ## Contact
 
